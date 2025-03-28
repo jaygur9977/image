@@ -29,7 +29,7 @@ const Navbar = () => {
 
   const fetchUserData = async (uid) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/get-user/${uid}`);
+      const response = await axios.get(`https://image-b4js.onrender.com/api/get-user/${uid}`);
       setUser(response.data.user);
     } catch (error) {
       console.error('Error fetching user data:', error);
@@ -63,7 +63,7 @@ const Navbar = () => {
 
   const saveUserToDatabase = async (userData) => {
     try {
-      await axios.post('http://localhost:5000/api/save-user', {
+      await axios.post('https://image-b4js.onrender.com/api/save-user', {
         uid: userData.sub,
         email: userData.email,
         name: userData.name,

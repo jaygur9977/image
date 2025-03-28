@@ -50,7 +50,7 @@ const Home = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/upload', formData, {
+      const response = await axios.post('https://image-b4js.onrender.com/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setUploadStatus('Files uploaded successfully!');
@@ -85,7 +85,7 @@ const Home = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/ask', {
+      const response = await axios.post('https://image-b4js.onrender.com/api/ask', {
         text,
         question: userQuestion,
         purpose,
