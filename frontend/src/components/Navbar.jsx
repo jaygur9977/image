@@ -88,7 +88,7 @@ const Navbar = () => {
       window.location.href = '/';
     }
   };
-  <a href="http://localhost:5173/" onClick={handleLogout}>Logout</a>
+  <a href="https://image-backed.onrender.com/" onClick={handleLogout}>Logout</a>
 
   if (loading) {
     return <div>Loading...</div>; 
