@@ -29,7 +29,7 @@ const ImageUploader = ({ studentId }) => {
       const formData = new FormData();
       images.forEach((image) => formData.append('images', image));
       formData.append('studentId', studentId);
-      const response = await axios.post('https://image-b4js.onrender.com/upload', formData, {
+      const response = await axios.post('https://image-backed.onrender.com/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 

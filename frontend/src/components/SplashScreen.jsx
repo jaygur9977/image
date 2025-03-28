@@ -20,7 +20,7 @@ const OKMAnimation = () => {
       const uid = localStorage.getItem('uid');
       if (uid) {
         try {
-          const response = await axios.get(`https://image-b4js.onrender.com/api/get-user/${uid}`);
+          const response = await axios.get(`https://image-backed.onrender.com/api/get-user/${uid}`);
           setUser(response.data.user);
         } catch (error) {
           console.error('Error fetching user:', error);
@@ -59,7 +59,7 @@ const OKMAnimation = () => {
 
   const fetchUserData = async (uid) => {
     try {
-      const response = await axios.get(`https://image-b4js.onrender.com/api/get-user/${uid}`);
+      const response = await axios.get(`https://image-backed.onrender.com/api/get-user/${uid}`);
       setUser(response.data.user);
     } catch (error) {
       console.error('Error fetching user data:', error);
@@ -94,7 +94,7 @@ const OKMAnimation = () => {
 
   const saveUserToDatabase = async (userData) => {
     try {
-      await axios.post('https://image-b4js.onrender.com/api/save-user', {
+      await axios.post('https://image-backed.onrender.com/api/save-user', {
         uid: userData.sub,
         email: userData.email,
         name: userData.name,
